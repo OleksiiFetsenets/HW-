@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pokémon Searching Engine</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body id="main_page">
+  <h1>Pokémon Searching Engine</h1>
+
+  <input type="text" id="name" placeholder="Charizard or 6" list="suggestions" />
+  <button id="srchBtn">Search</button>
+  <datalist id="suggestions"></datalist>
+
+  <div class="main-container">
+    <!-- Type -->
+    <div class="types-column-container">
+      <label>Type:</label>
+      <div id="typesTable">
+        <div id="leftTypes" class="type-column"></div>
+        <div id="rightTypes" class="type-column"></div>
+      </div>
+    </div>
+
+    <!-- Ability -->
+    <div class="ability-select-container">
+      <label for="abilitySelect">Ability:</label>
+      <select id="abilitySelect">
+        <option value="">all</option>
+      </select>
+    </div>
+  </div>
+
+  <h2>Result:</h2>
+
+
+  <div id="loaderWrapper">
+    <div class="loader-overlay"></div>
+    <div class="loader-centered">
+      <div class="pokeball"></div>
+    </div>
+  </div>
+  <div id="resultArea" class="results-container"></div>
+
+  <!-- Floating Inventory Pokéball with Preview -->
+  <div class="inventory-wrapper">
+    <div id="inventoryButton" class="inventory-pokeball" title="Open Inventory"></div>
+    <div id="inventoryPreview" class="inventory-preview">
+      <p><strong>Your Pokémon:</strong></p>
+      <ul id="inventoryList"></ul>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>
